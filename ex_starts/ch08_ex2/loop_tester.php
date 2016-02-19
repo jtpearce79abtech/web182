@@ -41,14 +41,13 @@
         <input type="hidden" name="action" value="process_rolls">
 
         <label>Number to Roll:</label>
-        <select name="number_to_roll">
-            <!-- TODO: Use a for loop to display these options ! -->
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
+         <select name="number_to_roll">
+            
+            <?php for($option=1;$option<=6;$option++) : ?>
+            <option value="<?php echo $option; ?>">
+                <?php echo $option; ?>
+            </option>
+            <?php endfor; ?>
         </select><br>
 
         <label>&nbsp;</label>
